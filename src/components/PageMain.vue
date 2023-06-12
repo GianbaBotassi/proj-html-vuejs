@@ -1,12 +1,17 @@
 <script>
+import AppBusiness from "./AppBusiness.vue";
+
 export default {
+    components: {
+        AppBusiness
+    },
     name: "PageMain"
 }
 
 </script>
 
 <template>
-    <h1>main</h1>
+    <AppBusiness />
 </template>
 
 <style scoped></style>
