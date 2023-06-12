@@ -1,5 +1,10 @@
 <script>
+import AppHero from "./AppHero.vue";
+
 export default {
+    components: {
+        AppHero
+    },
     name: "PageHeader"
 }
 
@@ -30,7 +35,7 @@ export default {
                 </div>
             </div>
         </section>
-        <section id="nav-jumbo-cont">
+        <section id="nav-hero-cont">
             <div class="cont" id="nav-bar">
                 <div id="logo">
                     <span>DA FARE</span>
@@ -44,9 +49,10 @@ export default {
                     <a href="#">
                         <i class="fa-regular fa-user"></i>
                     </a>
-                    <a href="#" class="get-in-touch">GET IN TOUCH</a>
+                    <a href="#" class="btn bg-green-btn">GET IN TOUCH</a>
                 </nav>
             </div>
+            <AppHero />
         </section>
     </header>
 </template>
@@ -62,6 +68,7 @@ header {
         background-color: $abbey;
         font-size: 0.6rem;
         padding: 10px 0;
+        font-weight: bold;
 
         >div {
             @include flex-content(between);
@@ -77,16 +84,17 @@ header {
         }
     }
 
-    #nav-jumbo-cont {
+    #nav-hero-cont {
         background-image: url(../assets/img/bg-4.jpg);
-        background-size: contain;
+        background-size: cover;
+        background-repeat: no-repeat;
         font-size: 0.7rem;
-        height: 800px;
-        font-weight: bold;
+        padding-bottom: 100px;
 
         #nav-bar {
             @include flex-content(between);
             padding-top: 10px;
+            font-weight: bold;
 
             nav {
                 @include flex-content(center);
@@ -100,11 +108,5 @@ header {
         }
 
     }
-}
-
-
-// Styles classes
-.get-in-touch {
-    background-color: $fountain-blue;
 }
 </style>

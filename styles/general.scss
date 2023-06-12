@@ -30,3 +30,21 @@ a {
 body {
     font-family: 'Montserrat', sans-serif;
 }
+
+
+// Styles classes
+
+.btn {
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 2px;
+
+}
+
+.bg-green-btn {
+    background-color: $fountain-blue;
+}
+
+.border-green-btn {
+    border: $fountain-blue solid 1px;
+}
