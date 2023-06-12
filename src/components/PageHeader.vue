@@ -28,9 +28,25 @@ export default {
                     <a href="#"><i class="fa-brands fa-twitter"></i></a>
                     <a href="#"><i class="fa-brands fa-linkedin"></i></a>
                 </div>
-                <div></div>
             </div>
-
+        </section>
+        <section id="nav-jumbo-cont">
+            <div class="cont" id="nav-bar">
+                <div id="logo">
+                    <span>DA FARE</span>
+                </div>
+                <nav>
+                    <a href="#">HOME</a>
+                    <a href="#">ABOUT</a>
+                    <a href="#">PROJECTS</a>
+                    <a href="#">PROCESS</a>
+                    <a href="#">TESTIMONIALS</a>
+                    <a href="#">
+                        <i class="fa-regular fa-user"></i>
+                    </a>
+                    <a href="#" class="get-in-touch">GET IN TOUCH</a>
+                </nav>
+            </div>
         </section>
     </header>
 </template>
@@ -40,13 +56,11 @@ export default {
 @use 'styles/partials/mixins.scss' as *;
 
 header {
-
-
+    color: $white;
 
     #info-top-bar {
         background-color: $abbey;
-        color: $white;
-        font-size: 0.7rem;
+        font-size: 0.6rem;
         padding: 10px 0;
 
         >div {
@@ -62,5 +76,35 @@ header {
             }
         }
     }
+
+    #nav-jumbo-cont {
+        background-image: url(../assets/img/bg-4.jpg);
+        background-size: contain;
+        font-size: 0.7rem;
+        height: 800px;
+        font-weight: bold;
+
+        #nav-bar {
+            @include flex-content(between);
+            padding-top: 10px;
+
+            nav {
+                @include flex-content(center);
+                gap: 10px;
+
+                a {
+                    padding: 5px 10px;
+                }
+
+            }
+        }
+
+    }
+}
+
+
+// Styles classes
+.get-in-touch {
+    background-color: $fountain-blue;
 }
 </style>
