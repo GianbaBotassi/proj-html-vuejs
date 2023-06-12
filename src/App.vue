@@ -18,4 +18,6 @@ export default {
   <PageFooter />
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss">
+@use 'styles/general.scss' as *;
+</style>

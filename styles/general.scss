@@ -1,1 +1,31 @@
 @use 'styles/partials/variables' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.cont {
+    max-width: 1160px;
+    margin: 0 auto;
+    width: 60%;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
