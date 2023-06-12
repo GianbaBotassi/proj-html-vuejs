@@ -43,8 +43,15 @@ body {
 
 .bg-green-btn {
     background-color: $fountain-blue;
+    color: $white;
 }
 
 .border-green-btn {
     border: $fountain-blue solid 1px;
+}
+
+.bg-color-green {
+    color: $atoll;
+    background-color: $gray-nurse;
+    padding: 5px 10px;
 }

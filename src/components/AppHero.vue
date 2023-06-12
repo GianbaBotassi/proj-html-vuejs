@@ -25,7 +25,6 @@ export default {
 #hero {
     width: 50%;
     margin-top: 100px;
-    font-size: 0.7rem;
 
     h4 {
         color: $fountain-blue;

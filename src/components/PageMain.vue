@@ -1,9 +1,15 @@
 <script>
 import AppBusiness from "./AppBusiness.vue";
+import AppCompany from "./AppCompany.vue";
+import AppActionProjects from "./AppActionProjects.vue";
+import AppProcessManagement from "./AppProcessManagement.vue";
 
 export default {
     components: {
-        AppBusiness
+        AppBusiness,
+        AppCompany,
+        AppActionProjects,
+        AppProcessManagement
     },
     name: "PageMain"
 }
@@ -11,7 +17,17 @@ export default {
 </script>
 
 <template>
-    <AppBusiness />
+    <main>
+        <AppBusiness />
+        <AppCompany />
+        <AppActionProjects />
+        <AppProcessManagement />
+    </main>
 </template>
 
-<style scoped></style>
+<style lang="scss" scoped>
+main {
+    font-size: 0.8rem;
+
+}
+</style>

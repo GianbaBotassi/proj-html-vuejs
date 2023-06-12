@@ -6,25 +6,25 @@ export default {
 </script>
 
 <template>
-    <div id="business">
+    <section id="business">
         <div class="cont">
             <div>
-                <i class="fa-solid fa-users"></i>
+                <i class="fa-solid fa-users bg-color-green"></i>
                 <h4>Human Capital</h4>
                 <p>Humanazing business: Harness the power of technoloty to improve the way people work.</p>
             </div>
             <div>
-                <i class="fa-solid fa-users"></i>
+                <i class="fa-solid fa-users bg-color-green"></i>
                 <h4>Human Capital</h4>
                 <p>Humanazing business: Harness the power of technoloty to improve the way people work.</p>
             </div>
             <div>
-                <i class="fa-solid fa-users"></i>
+                <i class="fa-solid fa-users bg-color-green"></i>
                 <h4>Human Capital</h4>
                 <p>Humanazing business: Harness the power of technoloty to improve the way people work.</p>
             </div>
         </div>
-    </div>
+    </section>
 </template>
 
 <style lang="scss" scoped>
@@ -47,19 +47,15 @@ export default {
         }
 
         i {
-            color: $atoll;
-            background-color: $gray-nurse;
-            padding: 10px;
             border-radius: 50%;
+            padding: 10px;
         }
 
         h4 {
             margin: 20px 0
         }
 
-        p {
-            font-size: 0.65rem;
-        }
+        p {}
 
     }
 }
