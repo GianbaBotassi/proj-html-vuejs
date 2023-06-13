@@ -18,7 +18,7 @@ export default {
             <div>
                 <span>
                     <i class="fa-solid fa-phone"></i>
-                    <span>+1 *305( 1234/5678)</span>
+                    <span>+1 (305) 1234-5678</span>
                 </span>
                 <span>
                     <i class="fa-solid fa-envelope"></i>

@@ -14,6 +14,12 @@ export default {
 <template>
     <footer>
         <FooterFormInfo />
+        <section id="copyright">
+            <div class="cont">
+                <div>The low price. We are tracking any intention of piracy.</div>
+                <div>&#169; NEXGEN is Proudly Powered by <span>Gianbab</span></div>
+            </div>
+        </section>
     </footer>
 </template>
 
@@ -22,6 +28,21 @@ export default {
 
 footer {
     background-color: $woodsmoke;
-    height: 500px;
+
+    #copyright {
+        background-color: black;
+        color: $white;
+        padding: 10px 0;
+
+        .cont {
+            display: flex;
+            justify-content: space-between;
+
+            span {
+                color: $fountain-blue;
+            }
+        }
+
+    }
 }
 </style>
