@@ -6,6 +6,24 @@ export default {
     name: "PageFooter",
     components: {
         FooterFormInfo
+    },
+    data() {
+        return {
+            contacts: [
+                {
+                    icon: 'fa-solid fa-phone',
+                    text: '+1 (305) 1234-5678'
+                },
+                {
+                    icon: 'fa-solid fa-envelope',
+                    text: 'hello@example.com'
+                },
+                {
+                    icon: 'fa-solid fa-location-dot',
+                    text: 'Main Avenue, 987'
+                }
+            ]
+        }
     }
 }
 
@@ -13,7 +31,7 @@ export default {
 
 <template>
     <footer>
-        <FooterFormInfo />
+        <FooterFormInfo :info="contacts" />
         <section id="copyright">
             <div class="cont">
                 <div>We are tracking any intention of piracy.</div>

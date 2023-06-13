@@ -1,6 +1,9 @@
 <script>
 export default {
-    name: "FooterFormInfo"
+    name: "FooterFormInfo",
+    props: {
+        info: Array
+    }
 }
 
 </script>
@@ -13,37 +16,35 @@ export default {
                 <h2>Get in <span class="select-bg">Touch</span></h2>
                 <p>We will respond to your message as soon as possible.
                 </p>
-                <div class="container">
-                    <form method="post" action="POST">
-                        <div class="flex-form">
-                            <input type="text" id="name" name="name" placeholder="Name">
-                            <input type="email" id="email" name="email" placeholder="Email">
-                            <input type="text" id="phone" name="phone" placeholder="Phone">
-                            <input type="text" id="info" name="info" placeholder="More info">
-                            <textarea name="message" id="message" rows="10" placeholder="Message"></textarea>
-                        </div>
-                        <button class="btn bg-green-btn" type="submit" value="Submit">SEND
-                        </button>
 
-                    </form>
-                </div>
+                <!-- Form -->
+                <form method="post">
+                    <div class="flex-form">
+                        <input type="text" id="name" name="name" placeholder="Name">
+                        <input type="email" id="email" name="email" placeholder="Email">
+                        <input type="text" id="phone" name="phone" placeholder="Phone">
+                        <input type="text" id="info" name="info" placeholder="More info">
+                        <textarea name="message" id="message" rows="10" placeholder="Message"></textarea>
+                    </div>
+                    <button class="btn bg-green-btn" type="submit" value="Submit">SEND
+                    </button>
+
+                </form>
             </div>
             <div id="info">
                 <h3>Example Inc.</h3>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore </p>
                 <p> Sit a laboriosam placeat fuga voluptas repellat tempore esse perf</p>
-                <div>
-                    <i class="fa-solid fa-phone"></i>
-                    <span>+1 (305) 1234-5678</span>
+
+                <!-- V-for per contatti -->
+                <div v-for="contact in info">
+                    <div>
+                        <i :class="contact.icon"></i>
+                        <span>{{ contact.text }}</span>
+                    </div>
                 </div>
-                <div>
-                    <i class="fa-solid fa-envelope"></i>
-                    <span>hello@example.com</span>
-                </div>
-                <div>
-                    <i class="fa-solid fa-location-dot"></i>
-                    <span>Main Avenue, 987</span>
-                </div>
+
+
                 <button class="btn border-green-btn ">VIEW MAP</button>
             </div>
         </div>
