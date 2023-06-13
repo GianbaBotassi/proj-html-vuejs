@@ -1,6 +1,6 @@
 <script>
 // Import dati json
-import navbar from "../data/navbar.json";
+import navbarData from "../data/navbar.json";
 
 // Import componenti
 import HeaderHero from "./Header/HeaderHero.vue";
@@ -16,7 +16,7 @@ export default {
     name: "PageHeader",
     data() {
         return {
-            navArray: navbar
+            navArray: navbarData
         }
     }
 }

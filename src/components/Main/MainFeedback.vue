@@ -18,19 +18,19 @@ export default {
             </div>
             <div class="card-list">
                 <div class="card">
-                    <img src="../assets/img/logo-1.png" alt="">
+                    <img src="../../assets/img/logo-1.png" alt="">
                     <p> Animi aliquam nemo vel dolorum recusandae. Voluptatum labore rerum aliquid, ipsum e.</p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     <i class="fa-solid fa-quote-right"></i>
                 </div>
                 <div class="card">
-                    <img src="../assets/img/logo-1.png" alt="">
+                    <img src="../../assets/img/logo-1.png" alt="">
                     <p> Animi aliquam nemo vel dolorum recusandae. Voluptatum labore rerum aliquid, ipsum e.</p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     <i class="fa-solid fa-quote-right"></i>
                 </div>
                 <div class="card">
-                    <img src="../assets/img/logo-1.png" alt="">
+                    <img src="../../assets/img/logo-1.png" alt="">
                     <p> Animi aliquam nemo vel dolorum recusandae. Voluptatum labore rerum aliquid, ipsum e.</p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     <i class="fa-solid fa-quote-right"></i>

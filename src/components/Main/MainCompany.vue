@@ -1,7 +1,9 @@
 <script>
-
 export default {
-    name: "MainCompany"
+    name: "MainCompany",
+    props: {
+        companyCards: Array
+    }
 }
 
 </script>
@@ -15,20 +17,10 @@ export default {
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo cum, consectetur dicta earum ab dolorum.
                 </p>
                 <div id="company-counter">
-                    <div>
-                        <span>0</span>
-                        <h3>Employees</h3>
-                        <p>Lorem ipsum dolor sit amet</p>
-                    </div>
-                    <div>
-                        <span>0</span>
-                        <h3>Employees</h3>
-                        <p>Lorem ipsum dolor sit amet</p>
-                    </div>
-                    <div>
-                        <span>0</span>
-                        <h3>Employees</h3>
-                        <p>Lorem ipsum dolor sit amet</p>
+                    <div v-for="card in companyCards">
+                        <span>{{ card.number }}</span>
+                        <h3>{{ card.title }}</h3>
+                        <p>{{ card.description }}</p>
                     </div>
                 </div>
                 <div>
@@ -45,7 +37,7 @@ export default {
 @use 'styles/partials/mixins.scss' as *;
 
 section {
-    background-image: url(../assets/img/about-5.jpg);
+    background-image: url(../../assets/img/about-5.jpg);
     background-size: 50%;
     background-position: right;
     background-repeat: no-repeat;

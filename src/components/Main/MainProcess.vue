@@ -68,7 +68,7 @@ section {
         margin-top: 50px;
 
         #status-cont {
-            width: 80%;
+            width: 70%;
             margin: 0 auto;
             display: flex;
             justify-content: center;

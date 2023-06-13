@@ -1,7 +1,8 @@
 <script>
 
 // Import dati json
-import business from "../data/business.json";
+import businessData from "../data/business.json";
+import companyData from "../data/company.json";
 
 // Import componenti
 import MainBusiness from "./Main/MainBusiness.vue";
@@ -21,7 +22,8 @@ export default {
     name: "PageMain",
     data() {
         return {
-            businessCards: business,
+            businessInfo: businessData,
+            companyInfo: companyData,
             actionsMenu: [
                 {
                     text: 'ALL',
@@ -67,8 +69,8 @@ export default {
 
 <template>
     <main>
-        <MainBusiness :busCards="businessCards" />
-        <MainCompany />
+        <MainBusiness :busCards="businessInfo" />
+        <MainCompany :companyCards="companyInfo" />
         <MainActionProjects />
         <MainProcess />
         <MainFeedback />
