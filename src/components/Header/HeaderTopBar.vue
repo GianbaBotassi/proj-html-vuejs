@@ -1,7 +1,10 @@
 <script>
 
 export default {
-    name: "HeaderTopBar"
+    name: "HeaderTopBar",
+    props: {
+        info: Array
+    }
 }
 
 </script>
@@ -16,13 +19,9 @@ export default {
                 </span>
             </div>
             <div>
-                <span>
-                    <i class="fa-solid fa-phone"></i>
-                    <span>+1 (305) 1234-5678</span>
-                </span>
-                <span>
-                    <i class="fa-solid fa-envelope"></i>
-                    <span>hello@example.com</span>
+                <span v-for="(contact, index) in info.slice(0, 2)" :key="index">
+                    <i :class="contact.icon"></i>
+                    <span>{{ contact.text }}</span>
                 </span>
                 <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                 <a href="#"><i class="fa-brands fa-twitter"></i></a>

@@ -37,14 +37,12 @@ export default {
                 <p> Sit a laboriosam placeat fuga voluptas repellat tempore esse perf</p>
 
                 <!-- V-for per contatti -->
-                <div v-for="contact in info">
+                <div v-for="(contact, index) in info" :key="index">
                     <div>
                         <i :class="contact.icon"></i>
                         <span>{{ contact.text }}</span>
                     </div>
                 </div>
-
-
                 <button class="btn border-green-btn ">VIEW MAP</button>
             </div>
         </div>

@@ -1,0 +1,27 @@
+[
+    {
+        "number": "01",
+        "text": "Collection of information",
+        "description": "Lorem ipsum dolor sit amet consectetur"
+    },
+    {
+        "number": "02",
+        "text": "Strategic planning",
+        "description": "Lorem ipsum dolor sit amet consectetur"
+    },
+    {
+        "number": "03",
+        "text": "Assignment of responsibilities",
+        "description": "Lorem ipsum dolor sit amet consectetur"
+    },
+    {
+        "number": "04",
+        "text": "Formatting process",
+        "description": "Lorem ipsum dolor sit amet consectetur"
+    },
+    {
+        "number": "05",
+        "text": "Continuity Formalization",
+        "description": "Lorem ipsum dolor sit amet consectetur"
+    }
+]

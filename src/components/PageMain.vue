@@ -5,6 +5,8 @@ import businessData from "../data/business.json";
 import companyData from "../data/company.json";
 import actionNav from "../data/actionNav.json";
 import actionCards from "../data/actionCards.json";
+import processData from "../data/process.json";
+import feedbackData from "../data/feedback.json";
 
 // Import componenti
 import MainBusiness from "./Main/MainBusiness.vue";
@@ -26,8 +28,10 @@ export default {
         return {
             businessInfo: businessData,
             companyInfo: companyData,
-            actionNavInfo: actionNav,
-            actionCardsInfo: actionCards
+            actionNav: actionNav,
+            actionCardsInfo: actionCards,
+            processInfo: processData,
+            feedback: feedbackData
         }
     }
 }
@@ -38,9 +42,9 @@ export default {
     <main>
         <MainBusiness :busCards="businessInfo" />
         <MainCompany :companyCards="companyInfo" />
-        <MainActionProjects :actionNav="actionNavInfo" :actionCards="actionCardsInfo" />
-        <MainProcess />
-        <MainFeedback />
+        <MainActionProjects :actionNav="actionNav" :actionCards="actionCardsInfo" />
+        <MainProcess :processDetails="processInfo" />
+        <MainFeedback :feedbackCompanies="feedback" />
     </main>
 </template>
 

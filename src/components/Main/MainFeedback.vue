@@ -1,7 +1,15 @@
 <script>
 export default {
 
-    name: "MainFeedback"
+    name: "MainFeedback",
+    props: {
+        feedbackCompanies: Array
+    },
+    methods: {
+        getImagePath: function (imgPath) {
+            return new URL(imgPath, import.meta.url).href;
+        }
+    }
 }
 
 </script>
@@ -17,25 +25,11 @@ export default {
                 </p>
             </div>
             <div class="card-list">
-                <div class="card">
-                    <img src="../../assets/img/logo-1.png" alt="">
-                    <p> Animi aliquam nemo vel dolorum recusandae. Voluptatum labore rerum aliquid, ipsum e.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <div class="card" v-for="(feed, index) in feedbackCompanies.slice(0, 3)" :key="index">
+                    <img :src="getImagePath(`../../assets/img/${feed.img}`)" :alt="feed.company">
+                    <p>{{ feed.description }}</p>
                     <i class="fa-solid fa-quote-right"></i>
                 </div>
-                <div class="card">
-                    <img src="../../assets/img/logo-1.png" alt="">
-                    <p> Animi aliquam nemo vel dolorum recusandae. Voluptatum labore rerum aliquid, ipsum e.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <i class="fa-solid fa-quote-right"></i>
-                </div>
-                <div class="card">
-                    <img src="../../assets/img/logo-1.png" alt="">
-                    <p> Animi aliquam nemo vel dolorum recusandae. Voluptatum labore rerum aliquid, ipsum e.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <i class="fa-solid fa-quote-right"></i>
-                </div>
-
             </div>
         </div>
     </section>

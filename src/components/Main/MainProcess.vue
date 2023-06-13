@@ -1,7 +1,10 @@
 <script>
 export default {
 
-    name: "MainProcess"
+    name: "MainProcess",
+    props: {
+        processDetails: Array
+    }
 }
 
 </script>
@@ -17,32 +20,10 @@ export default {
         </div>
         <div id="timeline-cont">
             <div id="status-cont">
-                <div>
-                    <h3>Collection of information</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur</p>
-                    <span class="bg-color-green">01</span>
-                </div>
-                <div>
-                    <h3>Strategic planning</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur</p>
-                    <span class="bg-color-green">02</span>
-
-                </div>
-                <div>
-                    <h3>Assignment of responsibilities</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur</p>
-                    <span class="bg-color-green">03</span>
-
-                </div>
-                <div>
-                    <h3>Formatting process</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur</p>
-                    <span class="bg-color-green">04</span>
-                </div>
-                <div>
-                    <h3>Continuity formalization</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur</p>
-                    <span class="bg-color-green">05</span>
+                <div v-for="(item, index) in processDetails" :key="index">
+                    <h3>{{ item.text }}</h3>
+                    <p>{{ item.description }}</p>
+                    <span class="bg-color-green">{{ item.number }}</span>
                 </div>
             </div>
         </div>
@@ -92,7 +73,7 @@ section {
                     font-weight: bold;
                     position: absolute;
                     left: 50%;
-                    top: -12%;
+                    top: -10%;
                     transform: translate(-50%);
                 }
             }
