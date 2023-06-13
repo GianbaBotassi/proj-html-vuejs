@@ -1,6 +1,6 @@
 <script>
 export default {
-    name: "AppHero"
+    name: "HeaderHero"
 }
 
 </script>
@@ -8,7 +8,7 @@ export default {
 <template>
     <div class="cont">
         <div id="hero">
-            <h4>HUMAN RESOURCES</h4>
+            <h5>HUMAN RESOURCES</h5>
             <h1>Get More Productivity</h1>
             <p>Planning, recruitment and selection process and performance evaluation of employees</p>
             <div>
@@ -25,11 +25,6 @@ export default {
 #hero {
     width: 50%;
     margin-top: 100px;
-
-    h4 {
-        color: $fountain-blue;
-        font-weight: bold;
-    }
 
     h1 {
         font-size: 3rem;

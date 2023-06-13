@@ -1,12 +1,27 @@
 <script>
+import FooterFormInfo from './FooterFormInfo.vue';
+
+
 export default {
-    name: "PageFooter"
+    name: "PageFooter",
+    components: {
+        FooterFormInfo
+    }
 }
 
 </script>
 
 <template>
-    <h1>Footer</h1>
+    <footer>
+        <FooterFormInfo />
+    </footer>
 </template>
 
-<style scoped></style>
+<style lang="scss" scoped>
+@use 'styles/partials/variables.scss' as *;
+
+footer {
+    background-color: $woodsmoke;
+    height: 500px;
+}
+</style>

@@ -1,0 +1,91 @@
+<script>
+export default {
+
+    name: "MainFeedback"
+}
+
+</script>
+
+<template>
+    <section>
+        <div class="cont">
+            <div class="infos">
+                <h5>CUSTOMER TESTIMONIALS</h5>
+                <h2>Trusted <span class="bg-color-green">Feedback</span></h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Il amet consectetur adipisicing elit. Illo cum,
+                    consectetur dicta earum ab dolorum.
+                </p>
+            </div>
+            <div class="card-list">
+                <div class="card">
+                    <img src="../assets/img/logo-1.png" alt="">
+                    <p> Animi aliquam nemo vel dolorum recusandae. Voluptatum labore rerum aliquid, ipsum e.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <i class="fa-solid fa-quote-right"></i>
+                </div>
+                <div class="card">
+                    <img src="../assets/img/logo-1.png" alt="">
+                    <p> Animi aliquam nemo vel dolorum recusandae. Voluptatum labore rerum aliquid, ipsum e.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <i class="fa-solid fa-quote-right"></i>
+                </div>
+                <div class="card">
+                    <img src="../assets/img/logo-1.png" alt="">
+                    <p> Animi aliquam nemo vel dolorum recusandae. Voluptatum labore rerum aliquid, ipsum e.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <i class="fa-solid fa-quote-right"></i>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</template>
+
+<style lang="scss" scoped>
+@use 'styles/partials/variables.scss' as *;
+@use 'styles/partials/mixins.scss' as *;
+
+section {
+    background-color: $gray-nurse;
+    padding: 80px 0;
+
+    .infos {
+        text-align: center;
+
+    }
+
+    .card-list {
+        @include flex-content(center);
+        gap: 10px;
+        margin-top: 15px;
+
+
+        .card {
+            flex-basis: calc((100%/3) - 10px);
+            padding: 20px;
+            background-color: $white;
+            border-radius: 5px;
+            position: relative;
+
+            img {
+                width: 80px;
+            }
+
+
+            h4 {
+                margin: 20px 0
+            }
+
+            i {
+                position: absolute;
+                right: 10px;
+                bottom: 10px;
+                font-size: 1.7rem;
+                color: $shuttle-gray;
+            }
+        }
+
+
+    }
+}
+</style>

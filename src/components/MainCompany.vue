@@ -1,7 +1,7 @@
 <script>
 
 export default {
-    name: "AppCompany"
+    name: "MainCompany"
 }
 
 </script>
@@ -10,7 +10,7 @@ export default {
     <section>
         <div class="cont">
             <div id="company">
-                <h4>ABOUT THE NETWORK</h4>
+                <h5>ABOUT THE NETWORK</h5>
                 <h2><span class=" bg-color-green">The</span> Company</h2>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo cum, consectetur dicta earum ab dolorum.
                 </p>
@@ -50,30 +50,15 @@ section {
     background-size: 50%;
     background-position: right;
     background-repeat: no-repeat;
-    font-size: 0.7rem;
 
     #company {
         padding: 80px 0;
         width: 50%;
 
-        h4 {
-            margin-bottom: 20px;
-            color: $fountain-blue;
-            font-weight: bold;
-        }
-
-        h2 {
-            font-size: 1.5rem;
-        }
-
-        p {
-            margin: 15px 0;
-        }
-
         #company-counter {
             @include flex-content(center);
             gap: 10px;
-            margin-bottom: 30px;
+            margin: 15px 0 30px;
 
             >div {
                 flex-basis: calc((100%/3) - 10px);

@@ -1,7 +1,7 @@
 <script>
 
 export default {
-    name: "AppActionProjects"
+    name: "MainActionProjects"
 }
 
 </script>
@@ -10,7 +10,7 @@ export default {
     <section>
         <div class="cont">
             <div id="action-projects">
-                <h6>WE DO MORE FOR EVERYONE</h6>
+                <h5>WE DO MORE FOR EVERYONE</h5>
                 <h2>ACTIONS & <span class="select-bg">Projects</span></h2>
                 <ul>
                     <li class="select-bg">ALL</li>
@@ -68,23 +68,9 @@ section {
     text-align: center;
     padding: 80px 0;
 
-    h6 {
-        color: $fountain-blue;
-    }
-
-    h2 {
-        margin: 20px 0
-    }
-
     ul {
         @include flex-content(center);
         gap: 20px;
-        font-size: 0.6rem;
-    }
-
-    .select-bg {
-        background-color: $ebony-clay;
-        padding: 5px;
     }
 
     .card-list {
@@ -97,11 +83,6 @@ section {
             flex-basis: calc((100%/3) - 10px);
             position: relative;
 
-
-            img {
-                max-width: 100%;
-            }
-
             h4 {
                 position: absolute;
                 bottom: 10%;
@@ -111,15 +92,6 @@ section {
                 z-index: 3;
             }
 
-            .opacity {
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                left: 0;
-                top: 0;
-                background-color: rgba($color: #000000, $alpha: 0.3);
-                z-index: 1;
-            }
         }
     }
 }
