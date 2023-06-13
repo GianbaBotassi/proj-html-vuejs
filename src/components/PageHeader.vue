@@ -37,7 +37,7 @@ export default {
                     text: 'TESTIMONIALS',
                     url: '#',
                     current: false
-                },
+                }
             ]
         }
     }

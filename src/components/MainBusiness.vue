@@ -1,6 +1,9 @@
 <script>
 export default {
-    name: "MainBusiness"
+    name: "MainBusiness",
+    props: {
+        busCards: Array
+    }
 }
 
 </script>
@@ -9,21 +12,12 @@ export default {
     <section>
         <div class="cont">
             <div class="cards">
-                <div>
-                    <i class="fa-solid fa-users bg-color-green"></i>
-                    <h4>Human Capital</h4>
-                    <p>Humanazing business: Harness the power of technoloty to improve the way people work.</p>
+                <div v-for="(card, index) in busCards" class="card" :key="index">
+                    <i :class="card.icon"></i>
+                    <h3>{{ card.title }}</h3>
+                    <p>{{ card.description }}</p>
                 </div>
-                <div>
-                    <i class="fa-solid fa-users bg-color-green"></i>
-                    <h4>Human Capital</h4>
-                    <p>Humanazing business: Harness the power of technoloty to improve the way people work.</p>
-                </div>
-                <div>
-                    <i class="fa-solid fa-users bg-color-green"></i>
-                    <h4>Human Capital</h4>
-                    <p>Humanazing business: Harness the power of technoloty to improve the way people work.</p>
-                </div>
+
             </div>
         </div>
     </section>
@@ -41,20 +35,21 @@ section {
         @include flex-content(center);
         gap: 10px;
 
-        div {
+        .card {
             flex-basis: calc((100%/3) - 10px);
             padding: 20px;
             background-color: $white;
             border-radius: 5px;
-        }
 
-        i {
-            border-radius: 50%;
-            padding: 10px;
-        }
+            i {
+                border-radius: 50%;
+                padding: 10px;
+                font-size: 1.2rem;
+            }
 
-        h4 {
-            margin: 20px 0
+            h3 {
+                margin: 20px 0
+            }
         }
     }
 }

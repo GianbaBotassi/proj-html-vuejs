@@ -46,7 +46,6 @@ export default {
 
 section {
     background-image: url(../assets/img/about-5.jpg);
-    height: 500px;
     background-size: 50%;
     background-position: right;
     background-repeat: no-repeat;
@@ -58,18 +57,22 @@ section {
         #company-counter {
             @include flex-content(center);
             gap: 10px;
-            margin: 15px 0 30px;
+            margin: 25px 0 30px;
 
             >div {
                 flex-basis: calc((100%/3) - 10px);
 
                 span {
                     color: $fountain-blue;
-                    font-size: 1rem;
+                    font-size: 1.3rem;
                     font-weight: bold;
                     margin-left: 10px;
                     padding-bottom: 5px;
                     display: block;
+                }
+
+                h3 {
+                    margin: 10px 0;
                 }
             }
         }

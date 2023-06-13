@@ -1,7 +1,7 @@
 <script>
 export default {
 
-    name: "MainManagement"
+    name: "MainProcess"
 }
 
 </script>
@@ -65,7 +65,7 @@ section {
     #timeline-cont {
         border-top: 2px solid $fountain-blue;
         text-align: center;
-        margin-top: 30px;
+        margin-top: 50px;
 
         #status-cont {
             width: 80%;

@@ -15,7 +15,7 @@ export default {
             <span><span class="bg-logo">NEX</span> GEN</span>
         </div>
         <nav>
-            <a v-for="item in navitems" :href="item.url">{{ item.text }}</a>
+            <a v-for="(item, index) in navitems" :href="item.url" :key="index">{{ item.text }}</a>
             <a href="#">
                 <i class="fa-regular fa-user"></i>
             </a>
