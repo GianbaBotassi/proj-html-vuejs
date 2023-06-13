@@ -1,7 +1,11 @@
 <script>
-import HeaderHero from "./HeaderHero.vue";
-import HeaderTopBar from "./HeaderTopBar.vue";
-import HeaderNavbar from "./HeaderNavbar.vue";
+// Import dati json
+import navbar from "../data/navbar.json";
+
+// Import componenti
+import HeaderHero from "./Header/HeaderHero.vue";
+import HeaderTopBar from "./Header/HeaderTopBar.vue";
+import HeaderNavbar from "./Header/HeaderNavbar.vue";
 
 export default {
     components: {
@@ -12,33 +16,7 @@ export default {
     name: "PageHeader",
     data() {
         return {
-            navArray: [
-                {
-                    text: 'HOME',
-                    url: '#',
-                    current: false
-                },
-                {
-                    text: 'ABOUT',
-                    url: '#',
-                    current: true
-                },
-                {
-                    text: 'PROJECTS',
-                    url: '#',
-                    current: false
-                },
-                {
-                    text: 'PROCESS',
-                    url: '#',
-                    current: false
-                },
-                {
-                    text: 'TESTIMONIALS',
-                    url: '#',
-                    current: false
-                }
-            ]
+            navArray: navbar
         }
     }
 }

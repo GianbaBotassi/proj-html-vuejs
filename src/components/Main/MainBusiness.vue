@@ -17,7 +17,6 @@ export default {
                     <h3>{{ card.title }}</h3>
                     <p>{{ card.description }}</p>
                 </div>
-
             </div>
         </div>
     </section>

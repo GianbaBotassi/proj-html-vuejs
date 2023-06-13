@@ -63,7 +63,7 @@ section {
 
         .card {
             flex-basis: calc((100%/3) - 10px);
-            padding: 20px;
+            padding: 20px 20px 40px;
             background-color: $white;
             border-radius: 5px;
             position: relative;

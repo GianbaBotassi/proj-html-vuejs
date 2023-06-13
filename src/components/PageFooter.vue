@@ -1,5 +1,5 @@
 <script>
-import FooterFormInfo from './FooterFormInfo.vue';
+import FooterFormInfo from './Footer/FooterFormInfo.vue';
 
 
 export default {

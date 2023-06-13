@@ -24,7 +24,7 @@ export default {
                     <i class="fa-solid fa-envelope"></i>
                     <span>hello@example.com</span>
                 </span>
-                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                 <a href="#"><i class="fa-brands fa-twitter"></i></a>
                 <a href="#"><i class="fa-brands fa-linkedin"></i></a>
             </div>
@@ -46,7 +46,8 @@ export default {
         @include flex-content(between);
 
         i {
-            margin-right: 5px
+            margin-right: 5px;
+            font-size: 0.7rem
         }
 
         >div {

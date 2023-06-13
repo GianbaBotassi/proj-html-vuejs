@@ -1,9 +1,14 @@
 <script>
-import MainBusiness from "./MainBusiness.vue";
-import MainCompany from "./MainCompany.vue";
-import MainActionProjects from "./MainActionProjects.vue";
-import MainProcess from "./MainProcess.vue";
-import MainFeedback from "./MainFeedback.vue";
+
+// Import dati json
+import business from "../data/business.json";
+
+// Import componenti
+import MainBusiness from "./Main/MainBusiness.vue";
+import MainCompany from "./Main/MainCompany.vue";
+import MainActionProjects from "./Main/MainActionProjects.vue";
+import MainProcess from "./Main/MainProcess.vue";
+import MainFeedback from "./Main/MainFeedback.vue";
 
 export default {
     components: {
@@ -16,23 +21,7 @@ export default {
     name: "PageMain",
     data() {
         return {
-            businessCards: [
-                {
-                    title: 'Human Capital',
-                    description: 'Humanizing business: Harness the power of technology to improve the way people work.',
-                    icon: 'fa-solid fa-users bg-color-green'
-                },
-                {
-                    title: 'Core Business',
-                    description: 'It takes innovative approaches to transform,modernize, and run existing platforms.',
-                    icon: 'fa-solid fa-globe bg-color-green'
-                },
-                {
-                    title: 'Performance',
-                    description: 'Achieving maximum impact and value from investments in finance and supply chain.',
-                    icon: 'fa-solid fa-gauge-high bg-color-green'
-                },
-            ],
+            businessCards: business,
             actionsMenu: [
                 {
                     text: 'ALL',
