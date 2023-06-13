@@ -109,7 +109,7 @@ export default {
 
             i {
                 border-radius: 50%;
-                padding: 5px;
+                padding: 10px;
                 color: $atoll;
                 background-color: $ebony-clay;
                 margin-right: 10px;

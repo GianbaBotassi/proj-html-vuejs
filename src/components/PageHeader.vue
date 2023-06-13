@@ -9,7 +9,38 @@ export default {
         HeaderNavbar,
         HeaderHero,
     },
-    name: "PageHeader"
+    name: "PageHeader",
+    data() {
+        return {
+            navArray: [
+                {
+                    text: 'HOME',
+                    url: '#',
+                    current: false
+                },
+                {
+                    text: 'ABOUT',
+                    url: '#',
+                    current: true
+                },
+                {
+                    text: 'PROJECTS',
+                    url: '#',
+                    current: false
+                },
+                {
+                    text: 'PROCESS',
+                    url: '#',
+                    current: false
+                },
+                {
+                    text: 'TESTIMONIALS',
+                    url: '#',
+                    current: false
+                },
+            ]
+        }
+    }
 }
 
 </script>
@@ -18,8 +49,7 @@ export default {
     <header>
         <HeaderTopBar />
         <section id="nav-hero-cont">
-            <div class="opacity"></div>
-            <HeaderNavbar />
+            <HeaderNavbar :navitems="navArray" />
             <HeaderHero />
         </section>
     </header>
