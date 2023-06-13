@@ -1,0 +1,37 @@
+[
+    {
+        "text": "ALL",
+        "url": "#",
+        "current": true
+    },
+    {
+        "text": "INSTITUTIONAL",
+        "url": "#",
+        "current": false
+    },
+    {
+        "text": "SOCIAL",
+        "url": "#",
+        "current": false
+    },
+    {
+        "text": "EVENTS",
+        "url": "#",
+        "current": false
+    },
+    {
+        "text": "INNOVATION",
+        "url": "#",
+        "current": false
+    },
+    {
+        "text": "ENVIRONMENT",
+        "url": "#",
+        "current": false
+    },
+    {
+        "text": "TECHNOLOGY",
+        "url": "#",
+        "current": false
+    }
+]

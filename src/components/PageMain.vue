@@ -3,6 +3,8 @@
 // Import dati json
 import businessData from "../data/business.json";
 import companyData from "../data/company.json";
+import actionNav from "../data/actionNav.json";
+import actionCards from "../data/actionCards.json";
 
 // Import componenti
 import MainBusiness from "./Main/MainBusiness.vue";
@@ -24,43 +26,8 @@ export default {
         return {
             businessInfo: businessData,
             companyInfo: companyData,
-            actionsMenu: [
-                {
-                    text: 'ALL',
-                    url: '#',
-                    current: true
-                },
-                {
-                    text: 'INSTITUTIONAL',
-                    url: '#',
-                    current: false
-                },
-                {
-                    text: 'SOCIAL',
-                    url: '#',
-                    current: false
-                },
-                {
-                    text: 'EVENTS',
-                    url: '#',
-                    current: false
-                },
-                {
-                    text: 'INNOVATION',
-                    url: '#',
-                    current: false
-                },
-                {
-                    text: 'ENVIRONMENT',
-                    url: '#',
-                    current: false
-                },
-                {
-                    text: 'TECHNOLOGY',
-                    url: '#',
-                    current: false
-                }
-            ]
+            actionNavInfo: actionNav,
+            actionCardsInfo: actionCards
         }
     }
 }
@@ -71,7 +38,7 @@ export default {
     <main>
         <MainBusiness :busCards="businessInfo" />
         <MainCompany :companyCards="companyInfo" />
-        <MainActionProjects />
+        <MainActionProjects :actionNav="actionNavInfo" :actionCards="actionCardsInfo" />
         <MainProcess />
         <MainFeedback />
     </main>

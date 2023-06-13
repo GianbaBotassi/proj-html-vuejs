@@ -1,0 +1,32 @@
+[
+    {
+        "text": "Academic professional program in social media",
+        "img": "project-1.jpg",
+        "alt": "Academic"
+    },
+    {
+        "text": "President's speech at the annual meeting",
+        "img": "project-2.jpg",
+        "alt": "Speech"
+    },
+    {
+        "text": "International business trip in Shanghai",
+        "img": "project-3.jpg",
+        "alt": "Trip Shanghai"
+    },
+    {
+        "text": "Technology workshop with education theme",
+        "img": "project-4.jpg",
+        "alt": "Workshop"
+    },
+    {
+        "text": "Donation of clothes and food to the partner NGO",
+        "img": "project-5.jpg",
+        "alt": "Donation clothes"
+    },
+    {
+        "text": "Confraternization of the procurement team",
+        "img": "project-6.jpg",
+        "alt": "Confraternization"
+    }
+]

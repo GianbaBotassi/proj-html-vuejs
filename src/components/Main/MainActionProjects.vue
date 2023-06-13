@@ -1,7 +1,16 @@
 <script>
 
 export default {
-    name: "MainActionProjects"
+    name: "MainActionProjects",
+    props: {
+        actionNav: Array,
+        actionCards: Array
+    },
+    methods: {
+        getImagePath: function (imgPath) {
+            return new URL(imgPath, import.meta.url).href;
+        }
+    }
 }
 
 </script>
@@ -13,43 +22,14 @@ export default {
                 <h5>WE DO MORE FOR EVERYONE</h5>
                 <h2>ACTIONS & <span class="select-bg">Projects</span></h2>
                 <ul>
-                    <li class="select-bg">ALL</li>
-                    <li>INSTITUTIONAL</li>
-                    <li>SOCIAL</li>
-                    <li>EVENTS</li>
-                    <li>INNOVATION</li>
-                    <li>ENVIRONMENT</li>
-                    <li>TECHNOLOGY</li>
+                    <a v-for="(item, index) in actionNav" :key="index" :href="item.url">
+                        <li :class="item.current ? 'select-bg' : ''">{{ item.text }}</li>
+                    </a>
                 </ul>
                 <div class="card-list">
-                    <div class="card">
-                        <img src="../assets/img/project-1.jpg" alt="">
-                        <h4>Academic professional program in social media</h4>
-                        <div class="opacity"></div>
-                    </div>
-                    <div class="card">
-                        <img src="../assets/img/project-1.jpg" alt="">
-                        <h4>Academic professional program in social media</h4>
-                        <div class="opacity"></div>
-                    </div>
-                    <div class="card">
-                        <img src="../assets/img/project-1.jpg" alt="">
-                        <h4>Academic professional program in social media</h4>
-                        <div class="opacity"></div>
-                    </div>
-                    <div class="card">
-                        <img src="../assets/img/project-1.jpg" alt="">
-                        <h4>Academic professional program in social media</h4>
-                        <div class="opacity"></div>
-                    </div>
-                    <div class="card">
-                        <img src="../assets/img/project-1.jpg" alt="">
-                        <h4>Academic professional program in social media</h4>
-                        <div class="opacity"></div>
-                    </div>
-                    <div class="card">
-                        <img src="../assets/img/project-1.jpg" alt="">
-                        <h4>Academic professional program in social media</h4>
+                    <div class="card" v-for="(card, index) in actionCards" :key="index">
+                        <img :src="getImagePath(`../../assets/img/${card.img}`)" :alt="card.alt">
+                        <h4>{{ card.text }}</h4>
                         <div class="opacity"></div>
                     </div>
                 </div>
