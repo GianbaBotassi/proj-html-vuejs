@@ -56,10 +56,19 @@ h2 {
 .bg-green-btn {
     background-color: $fountain-blue;
     color: $white;
+
+    &:hover {
+        background-color: $blue-lagoon;
+    }
 }
 
 .border-green-btn {
     border: $fountain-blue solid 1px;
+
+    &:hover {
+        background-color: $silver-sand;
+        color: #097a7c;
+    }
 }
 
 .bg-color-green {

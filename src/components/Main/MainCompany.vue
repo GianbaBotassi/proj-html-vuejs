@@ -44,7 +44,7 @@ section {
 
     #company {
         padding: 80px 0;
-        width: 50%;
+        width: 40%;
 
         #company-counter {
             @include flex-content(center);
