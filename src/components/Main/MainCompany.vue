@@ -48,11 +48,11 @@ section {
 
         #company-counter {
             @include flex-content(center);
-            gap: 10px;
+            gap: 20px;
             margin: 25px 0 30px;
 
             >div {
-                flex-basis: calc((100%/3) - 10px);
+                flex-basis: calc((100%/3) - 20px);
 
                 span {
                     color: $fountain-blue;

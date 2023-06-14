@@ -32,13 +32,14 @@ section {
 
     .cards {
         @include flex-content(center);
-        gap: 10px;
+        gap: 20px;
 
         .card {
-            flex-basis: calc((100%/3) - 10px);
+            flex-basis: calc((100%/3) - 20px);
             padding: 20px;
             background-color: $white;
             border-radius: 5px;
+            height: 200px;
 
             i {
                 border-radius: 50%;
