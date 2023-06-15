@@ -1,7 +1,6 @@
 <script>
-// Import dati json
-import navbarData from "../data/navbar.json";
-import contactData from "../data/contacts.json";
+// Import store
+import { store } from "../store.js";
 
 // Import componenti
 import HeaderHero from "./Header/HeaderHero.vue";
@@ -17,8 +16,7 @@ export default {
     name: "PageHeader",
     data() {
         return {
-            navArray: navbarData,
-            contacts: contactData
+            store
         }
     }
 }
@@ -27,9 +25,9 @@ export default {
 
 <template>
     <header>
-        <HeaderTopBar :info="contacts" />
+        <HeaderTopBar :info="store" />
         <section id="nav-hero-cont">
-            <HeaderNavbar :navitems="navArray" />
+            <HeaderNavbar :details="store" />
             <HeaderHero />
         </section>
     </header>

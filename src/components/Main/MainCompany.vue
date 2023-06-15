@@ -2,7 +2,7 @@
 export default {
     name: "MainCompany",
     props: {
-        companyCards: Array
+        companyCards: Object
     }
 }
 
@@ -17,7 +17,7 @@ export default {
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo cum, consectetur dicta earum ab dolorum.
                 </p>
                 <div id="company-counter">
-                    <div v-for="(card, index) in companyCards" :key="index">
+                    <div v-for="(card, index) in companyCards.mainCompany" :key="index">
                         <span>{{ card.number }}</span>
                         <h3>{{ card.title }}</h3>
                         <p>{{ card.description }}</p>

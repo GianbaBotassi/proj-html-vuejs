@@ -3,7 +3,7 @@
 export default {
     name: "HeaderNavbar",
     props: {
-        navitems: Array
+        details: Object
     }
 }
 
@@ -15,7 +15,9 @@ export default {
             <span><span class="bg-logo">NEX</span> GEN</span>
         </div>
         <nav>
-            <a v-for="(item, index) in navitems" :href="item.url" :key="index">{{ item.text }}</a>
+            <a v-for="(item, index) in details.headerNavbar" :href="item.url" :key="index"
+                :class="item.current ? 'nav-select' : ''">{{
+                    item.text }}</a>
             <a href="#">
                 <i class="fa-regular fa-user"></i>
             </a>

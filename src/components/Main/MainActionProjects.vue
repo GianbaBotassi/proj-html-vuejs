@@ -3,8 +3,8 @@
 export default {
     name: "MainActionProjects",
     props: {
-        actionNav: Array,
-        actionCards: Array
+        details: Object,
+        cards: Object
     },
     methods: {
         getImagePath: function (imgPath) {
@@ -22,12 +22,12 @@ export default {
                 <h5>WE DO MORE FOR EVERYONE</h5>
                 <h2>ACTIONS & <span class="select-bg">Projects</span></h2>
                 <ul>
-                    <a v-for="(item, index) in actionNav" :key="index" :href="item.url">
+                    <a v-for="(item, index) in details.mainActionNav" :key="index" :href="item.url">
                         <li :class="item.current ? 'select-bg' : ''">{{ item.text }}</li>
                     </a>
                 </ul>
                 <div class="card-list">
-                    <div class="card" v-for="(card, index) in actionCards" :key="index">
+                    <div class="card" v-for="(card, index) in cards.mainActionCards" :key="index">
                         <img :src="getImagePath(`../../assets/img/${card.img}`)" :alt="card.alt">
                         <h4>{{ card.text }}</h4>
                         <div class="opacity"></div>

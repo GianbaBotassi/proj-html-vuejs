@@ -2,7 +2,7 @@
 export default {
     name: "MainBusiness",
     props: {
-        busCards: Array
+        busCards: Object
     }
 }
 
@@ -12,7 +12,7 @@ export default {
     <section>
         <div class="cont">
             <div class="cards">
-                <div v-for="(card, index) in busCards" class="card" :key="index">
+                <div v-for="(card, index) in busCards.mainBusiness" class="card" :key="index">
                     <i :class="card.icon"></i>
                     <h3>{{ card.title }}</h3>
                     <p>{{ card.description }}</p>

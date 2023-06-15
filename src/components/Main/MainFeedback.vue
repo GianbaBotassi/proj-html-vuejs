@@ -3,7 +3,7 @@ export default {
 
     name: "MainFeedback",
     props: {
-        feedbackCompanies: Array
+        details: Object
     },
     methods: {
         getImagePath: function (imgPath) {
@@ -25,7 +25,7 @@ export default {
                 </p>
             </div>
             <div class="card-list">
-                <div class="card" v-for="(feed, index) in feedbackCompanies.slice(0, 3)" :key="index">
+                <div class="card" v-for="(feed, index) in details.mainFeedback.slice(0, 3)" :key="index">
                     <img :src="getImagePath(`../../assets/img/${feed.img}`)" :alt="feed.company">
                     <p>{{ feed.description }}</p>
                     <i class="fa-solid fa-quote-right"></i>

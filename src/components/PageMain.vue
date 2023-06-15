@@ -1,12 +1,7 @@
 <script>
 
-// Import dati json
-import businessData from "../data/business.json";
-import companyData from "../data/company.json";
-import actionNav from "../data/actionNav.json";
-import actionCards from "../data/actionCards.json";
-import processData from "../data/process.json";
-import feedbackData from "../data/feedback.json";
+// Import store
+import { store } from "../store.js";
 
 // Import componenti
 import MainBusiness from "./Main/MainBusiness.vue";
@@ -26,12 +21,7 @@ export default {
     name: "PageMain",
     data() {
         return {
-            businessInfo: businessData,
-            companyInfo: companyData,
-            actionNav: actionNav,
-            actionCardsInfo: actionCards,
-            processInfo: processData,
-            feedback: feedbackData
+            store
         }
     }
 }
@@ -40,11 +30,11 @@ export default {
 
 <template>
     <main>
-        <MainBusiness :busCards="businessInfo" />
-        <MainCompany :companyCards="companyInfo" />
-        <MainActionProjects :actionNav="actionNav" :actionCards="actionCardsInfo" />
-        <MainProcess :processDetails="processInfo" />
-        <MainFeedback :feedbackCompanies="feedback" />
+        <MainBusiness :busCards="store" />
+        <MainCompany :companyCards="store" />
+        <MainActionProjects :details="store" :cards="store" />
+        <MainProcess :details="store" />
+        <MainFeedback :details="store" />
     </main>
 </template>
 

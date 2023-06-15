@@ -3,7 +3,7 @@
 export default {
     name: "HeaderTopBar",
     props: {
-        info: Array
+        info: Object
     }
 }
 
@@ -19,10 +19,10 @@ export default {
                 </span>
             </div>
             <div>
-                <span v-for="(contact, index) in info.slice(0, 2)" :key="index">
+                <a v-for="(contact, index) in info.contacts.slice(0, 2)" :key="index" href="#">
                     <i :class="contact.icon"></i>
                     <span>{{ contact.text }}</span>
-                </span>
+                </a>
                 <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                 <a href="#"><i class="fa-brands fa-twitter"></i></a>
                 <a href="#"><i class="fa-brands fa-linkedin"></i></a>

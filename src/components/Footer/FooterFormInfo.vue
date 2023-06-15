@@ -2,7 +2,7 @@
 export default {
     name: "FooterFormInfo",
     props: {
-        info: Array
+        info: Object
     }
 }
 
@@ -37,7 +37,7 @@ export default {
                 <p> Sit a laboriosam placeat fuga voluptas repellat tempore esse perf</p>
 
                 <!-- V-for per contatti -->
-                <div v-for="(contact, index) in info" :key="index">
+                <div v-for="(contact, index) in info.contacts" :key="index">
                     <div>
                         <i :class="contact.icon"></i>
                         <span>{{ contact.text }}</span>
@@ -112,6 +112,7 @@ export default {
                 color: $atoll;
                 background-color: $ebony-clay;
                 margin-right: 10px;
+                width: 30px;
             }
         }
 

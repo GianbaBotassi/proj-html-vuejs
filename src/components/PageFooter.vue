@@ -1,6 +1,6 @@
 <script>
 // Import data json
-import contactData from "../data/contacts.json";
+import { store } from "../store.js";
 
 // Import components
 import FooterFormInfo from './Footer/FooterFormInfo.vue';
@@ -13,7 +13,7 @@ export default {
     },
     data() {
         return {
-            contacts: contactData
+            store
         }
     }
 }
@@ -22,7 +22,7 @@ export default {
 
 <template>
     <footer>
-        <FooterFormInfo :info="contacts" />
+        <FooterFormInfo :info="store" />
         <section id="copyright">
             <div class="cont">
                 <div>We are tracking any intention of piracy.</div>

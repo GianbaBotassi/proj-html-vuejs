@@ -3,7 +3,7 @@ export default {
 
     name: "MainProcess",
     props: {
-        processDetails: Array
+        details: Object
     }
 }
 
@@ -20,7 +20,7 @@ export default {
         </div>
         <div id="timeline-cont">
             <div id="status-cont">
-                <div v-for="(item, index) in processDetails" :key="index">
+                <div v-for="(item, index) in details.mainProcess" :key="index">
                     <h3>{{ item.text }}</h3>
                     <p>{{ item.description }}</p>
                     <span class="bg-color-green">{{ item.number }}</span>
